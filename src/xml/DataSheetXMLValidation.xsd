@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="dataSheet" type="dataSheetType"/>
+  <xs:complexType name="dataRowsType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="date"/>
+      <xs:element type="xs:string" name="x"/>
+      <xs:element type="xs:string" name="y"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="dataSheetType">
+    <xs:sequence>
+      <xs:element type="dataRowsType" name="dataRows" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
